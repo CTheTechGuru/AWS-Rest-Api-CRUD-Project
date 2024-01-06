@@ -34,60 +34,65 @@ AWS Rest API CRUD Project
 
 ##  
 
-### 1. 
+### 1. Builld DynamoDB Table
 
-*
-*
-*
-*
-
-
+* Once in the the dynamoDB console choose tables and create table.
+* Name the table employee_info.
+* Name the partition id employeeid.
+* Seleect create table.
 
 
 
+### 2. Create Lambda Function
 
+* Open the lambda service and choose create function.
+* Under basic information choose
+* Lets name the function api_processing
+* For runtime we will use python3.11
+* For the default execution role we will choose "create new role from AWS policy templates"
+* Under role name enter serverless_dapi_demo (gives access to cloudwatch and dynamoDB)
+  
 
-
-
-
-### 2. 
-
-*
-*
-*
-*
-*
 
   
 
   
 
-### 3.
+### 3. Create Role for
 
-*
-*
-*
-*
-*
+* After the Lambda function is created go to the bottom panel and choose Configuration, and select Permissions.
+* 
+* Select the role name.
+  
+* Now we want to add permissions that will allow cloudwatch and dynamodb access, choose add permissions and attach policies.
+  
+* Search within the permissions and choose AmazonDynamoDBFullAccess and CloudwatchLogsFullAccess.
 
 
 
-## 4.
 
-*
-*
-*
-*
-*
+
+## 4. Create REST API in API Gateway 
+
+* Go to REST API and select build.
+* Choose NEW API and name it serverless-demo.
+* Select Create API.
+
 
 
  
-## 5.
+## 5. Create API Gateway Resources and Methods
 
-*
-*
-*
-*
+* Select create resource and name it status and check CORS. 
+* Next we will create a get method. 
+* Choose GET for the Method type.
+* Select Lambda proxy integration.
+* Under the lambda function tab next to the AZ choose the function name api_processing created earlier.
+
+* Next Create 2 more resources. employee and employees.
+
+* For employees and empployees we will create get methods.
+* 
 *
 *
 
