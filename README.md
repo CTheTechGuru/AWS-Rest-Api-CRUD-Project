@@ -2,7 +2,7 @@ AWS Rest API CRUD Project
 
 <h1 align="center">AWS Rest API CRUD Project</h3>
 
-![]()
+![](https://github.com/CTheTechGuru/AWS-Rest-Api-CRUD-Project/blob/main/Images/image21.jpg)
 
 
 
@@ -14,17 +14,23 @@ AWS Rest API CRUD Project
 
 #### Overview:
 
+ In this tutorial we will go over thr following.  
+ 
+-Creating a REST API in API gateway with several different endpoint and all the CRUD methods.
+
+-Write python code in Lambda to process all methods and resources part of the API Gateway.
+
+-Creating a dynamoDB table to store data from our API.
+
+-Create the IAM roles to use cloudwatch and dynamoDB.
 
 
  # Prerequisites
 
 
-* Basic understanding of Computer Networks.
-* Basic understanding of TCP/IP.
-* Basic understanding of virtualization.
 * Access to AWS (Free Tier or Paid)
 * _Best Practice_ Create AWS user account with administrator access.(enable MFA on lab account)
-* Download Putty and Pageant
+* An IDE, I will use studio visual code. 
 
 ##  
 
