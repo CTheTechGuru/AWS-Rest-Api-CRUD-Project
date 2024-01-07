@@ -181,7 +181,30 @@ AWS Rest API CRUD Project
 
 
  
-## 10.
+## 10. DynamoDB 
+
+*
+*
+*
+*
+*
+*
+
+ 
+## 10. Cloudwatch Logs
+
+* Open the cloudwatch console and choose log groups.
+* click on the hyperlink of the first log at the top.
+*  select sear all log streams.
+* From here you can monitor the logs and errors that occur. 
+*
+*
+*
+*
+*
+
+ 
+## 10. GET, DELETE, PATCH Methods 
 
 *
 *
