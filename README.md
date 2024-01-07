@@ -141,16 +141,16 @@ AWS Rest API CRUD Project
 * Your webpage should display
   ![]()
 
-* Next we will bo
-*
-*
+  
 
 
 ## 8. Enter Lambda Code
 
 * Open the Lambda Service and choose the lambda function created api_processing.
+  
 * Under Code source choose Test.
-* Here is where we will copy the python code from here:  ![Python_Code]()
+  
+* Here is where we will copy the python code from here:  ![Python Code](https://github.com/CTheTechGuru/AWS-Rest-Api-CRUD-Project/blob/main/Lambda_Function.py)
 * 
 *
 *
