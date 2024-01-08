@@ -264,7 +264,7 @@ _Example_ update employee 98 Salary to 555555
 
 <h1 align="center">Summary</h3>
 
-   In summary we created a dynamoDB table which we used to store our API responses. We created a lambda function which utilized a python script to deploy our serverless environment. 
+   In summary we created a dynamoDB table which we used to store our entries. We created a lambda function which utilized a python script to deploy our serverless environment. 
  We created an IAM role for DynamoDDB and Cloudwatch to allow our lambda function to have access to store items in our table along with logging and monitoring.
  Created a Rest API which allowed us to implement our CRUD methods to interact without DB.
  Deployed our lambda code which created our serverless environment. Next we used postman to add entries to our DB table and tested each CRUD method.
