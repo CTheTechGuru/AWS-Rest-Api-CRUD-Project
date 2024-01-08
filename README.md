@@ -193,11 +193,18 @@ AWS Rest API CRUD Project
  
 ## 10. Cloudwatch Logs
 
-* Open the cloudwatch console and choose log groups.
-* click on the hyperlink of the first log at the top.
-*  select sear all log streams.
+* Open the cloudwatch console and select the Logs drop down, then choose log insights.
+  
+  ![]()
+  
+* Now select the drop down next to browse log groups, here we will select our api. ``` api_processing ```
+  
+* Choose Run query.
+  
+  ![]()
+  
 * From here you can monitor the logs and errors that occur. 
-*
+
 *
 *
 *
@@ -206,9 +213,19 @@ AWS Rest API CRUD Project
  
 ## 10. GET, DELETE, PATCH Methods 
 
-*
-*
-*
+* First we will use the GET method to query data for our employeeid "98"
+  ``` Our return ```
+  ![]()
+  
+* Remeber if we want to query all inputs we can run a GET on employees. Which would return
+
+   ![]()
+
+  
+* Next we will PATCH an entry.
+* To select our first entry will be the employeeid, in our code when patching the key has to be employeeId instead of employeeid.
+* We will enter values for update key and update value of what we would like to change.
+``` 
 *
 *
 *
