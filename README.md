@@ -212,20 +212,40 @@ AWS Rest API CRUD Project
 
  
 ## 10. GET, DELETE, PATCH Methods 
-
-* First we will use the GET method to query data for our employeeid "98"
+1. GET METHOD _example_ ``` GET https://jel1cmykxa.execute-api.us-east-1.amazonaws.com/production/employee?employeeid=(your choice of employee id) ```
+ * First we will use the GET method to query data for our employeeid "98"
   ``` Our return ```
   ![]()
   
-* Remeber if we want to query all inputs we can run a GET on employees. Which would return
-
+* Remember if we want to query all inputs we can run a GET on employees. Which would return
+ _example_ ```https://jel1cmykxa.execute-api.us-east-1.amazonaws.com/production/employees ```
    ![]()
 
-  
+2. PATCH  METHOD _example_ ``` PATCH https://jel1cmykxa.execute-api.us-east-1.amazonaws.com/production/employees ```
 * Next we will PATCH an entry.
 * To select our first entry will be the employeeid, in our code when patching the key has to be employeeId instead of employeeid.
 * We will enter values for update key and update value of what we would like to change.
-``` 
+
+_Example_ update employee 98 Salary to 555555
+
+```
+{
+    "employeeId": "98",
+    "updateKey": "Salary",
+    "updateValue": 5555555
+
+
+    
+}
+```
+3. DELETE METHOD _example_ ``` DELETE https://jel1cmykxa.execute-api.us-east-1.amazonaws.com/production/employee
+
+```
+{
+   "employeeId": "98",
+
+} ```   
+![]()
 *
 *
 *
