@@ -42,7 +42,7 @@ AWS Rest API CRUD Project
 
 * Name the table employee_info.
 * Name the partition id employeeid.
-* Seleect create table.
+* Select create table.
 
 
 
@@ -100,7 +100,7 @@ AWS Rest API CRUD Project
   
 * Select Create resource, we will create 3 resources.
 * For the resource path choose /
-* For the reource name we will create 3 individual resources named
+* For the resource name we will create 3 individual resources named
  ```
   employee
   employees
@@ -120,14 +120,14 @@ AWS Rest API CRUD Project
   ![](https://github.com/CTheTechGuru/AWS-Rest-Api-CRUD-Project/blob/main/Images/1.png?raw=true)
 
  
-``` Repeat this process for each reseource (employees and status) ```
+``` Repeat this process for each resource (employees and status) ```
 * Choose Enable Lambda proxy Integration.
 * Select the Lambda function we created api_processing.
 * Select Create Method.
 
  ![](https://github.com/CTheTechGuru/AWS-Rest-Api-CRUD-Project/blob/main/Images/3.png?raw=true)
  
-* _Once back at the API module repeat the same process for the employees resouce and status resources_
+* _Once back at the API module repeat the same process for the employees resource and status resources_
 
 * To modify employee we will add DELETE PATCH and POST Methods. Repeat the process but choose each for method type when creating.
 * When done your API module should look similar to below. 
@@ -139,9 +139,12 @@ AWS Rest API CRUD Project
 * In the API module select Deploy API
 * Select the drop down and choose "New Stage" for stage name enter production.
 * Select Deploy.
+  
   ![](https://github.com/CTheTechGuru/AWS-Rest-Api-CRUD-Project/blob/main/Images/prod%20deploy.png?raw=true)
-* To test, select the invoke url and enter it into a browser with /status at the end.
+  
+* To test, select the invoke URL and enter it into a browser with /status at the end.
 * Your webpage should display
+  
   ![](https://github.com/CTheTechGuru/AWS-Rest-Api-CRUD-Project/blob/main/Images/API%20Test.png?raw=true)
 
   
@@ -169,57 +172,60 @@ AWS Rest API CRUD Project
 
   ``` "Service is operational" ```
    
-## 9. Postman- Add entries to DynamoDB table
+## 9. Postman- Add entries to DynamoDB table ![Postman Link](https://webpostman.co)
 
-* In the Postman My work space next to overview we will select the plus sign. 
-* Make select POST is selected and add the invoke url in the blank. 
-* Below select Body and make sure its in JSON format
-*
-*
+* Once logged in In the Postman My workspace next to overview we will select the plus sign. 
+* Hover over overview and right click, choose NEW Request. 
+* Add the Lambda invoke URL in the blank. 
+* Below select Body and make sure it’s in JSON format and for the body choose Raw.
 
+* Next we will add entries.
+* Select GET Method
+* In the editor enter your values
+* I will add multiple entries. Duplicate with different values and select send for the entries to update in the table. 
+  
+  ![](https://github.com/CTheTechGuru/AWS-Rest-Api-CRUD-Project/blob/main/Images/Get%20Method%20based%20off%20ID.png?raw=true)
 
+* To verify multiple were made entries check the employees resource. 
 
-
+  ![](https://github.com/CTheTechGuru/AWS-Rest-Api-CRUD-Project/blob/main/Images/GET%20Employees%20Table.png)
  
-## 10. DynamoDB 
+## 10. Verify DynamoDB entries in employee_info table
 
-*
-*
-*
-*
-*
-*
+* Open the DynamoDB console and select Tables.
+* Select the employee_info table then explore table items.
+* You should see the entries you’ve made.
+
+  ![](https://github.com/CTheTechGuru/AWS-Rest-Api-CRUD-Project/blob/main/Images/DBTABLE.png?raw=true)
+
 
  
 ## 10. Cloudwatch Logs
 
 * Open the cloudwatch console and select the Logs drop down, then choose log insights.
   
-  ![]()
+  ![](https://github.com/CTheTechGuru/AWS-Rest-Api-CRUD-Project/blob/main/Images/Log%20Insights.png?raw=true)
   
 * Now select the drop down next to browse log groups, here we will select our api. ``` api_processing ```
   
 * Choose Run query.
   
-  ![]()
+  ![](https://github.com/CTheTechGuru/AWS-Rest-Api-CRUD-Project/blob/main/Images/Logs%20from%20our%20api.png?raw=true)
   
 * From here you can monitor the logs and errors that occur. 
 
-*
-*
-*
-*
 
  
-## 10. GET, DELETE, PATCH Methods 
+## 10. GET, PATCH, DELETE Methods 
+
 1. GET METHOD _example_ ``` GET https://jel1cmykxa.execute-api.us-east-1.amazonaws.com/production/employee?employeeid=(your choice of employee id) ```
  * First we will use the GET method to query data for our employeeid "98"
   ``` Our return ```
-  ![]()
+  ![](https://github.com/CTheTechGuru/AWS-Rest-Api-CRUD-Project/blob/main/Images/Get%20Method%20based%20off%20ID.png?raw=true)
   
 * Remember if we want to query all inputs we can run a GET on employees. Which would return
  _example_ ```https://jel1cmykxa.execute-api.us-east-1.amazonaws.com/production/employees ```
-   ![]()
+   ![](https://github.com/CTheTechGuru/AWS-Rest-Api-CRUD-Project/blob/main/Images/GET%20Employees%20Table.png)
 
 2. PATCH  METHOD _example_ ``` PATCH https://jel1cmykxa.execute-api.us-east-1.amazonaws.com/production/employees ```
 * Next we will PATCH an entry.
@@ -227,6 +233,8 @@ AWS Rest API CRUD Project
 * We will enter values for update key and update value of what we would like to change.
 
 _Example_ update employee 98 Salary to 555555
+
+![](https://github.com/CTheTechGuru/AWS-Rest-Api-CRUD-Project/blob/main/Images/PATCH%20Changed%20Salary%20of%20ID%2098.png?raw=true)
 
 ```
 {
@@ -237,24 +245,31 @@ _Example_ update employee 98 Salary to 555555
 
     
 }
-```
-3. DELETE METHOD _example_ ``` DELETE https://jel1cmykxa.execute-api.us-east-1.amazonaws.com/production/employee
 
 ```
+
+3. DELETE METHOD _example_ DELETE ``` https://jel1cmykxa.execute-api.us-east-1.amazonaws.com/production/employee ```
+
 {
    "employeeId": "98",
 
-} ```   
-![]()
-*
-*
-*
+}
+
+ ![](https://github.com/CTheTechGuru/AWS-Rest-Api-CRUD-Project/blob/main/Images/GET%20Employees%20Table.png?raw=true)
+
+* Run GET on the employees table to confirm deletion.
+
+  ![](https://github.com/CTheTechGuru/AWS-Rest-Api-CRUD-Project/blob/main/Images/Verify%20Delete.png)
 
 
 <h1 align="center">Summary</h3>
 
-
-
+   In summary we created a dynamoDB table which we used to store our API responses. We created a lambda function which utilized a python script to deploy our serverless environment. 
+ We created an IAM role for DynamoDDB and Cloudwatch to allow our lambda function to have access to store items in our table along with logging and monitoring.
+ Created a Rest API which allowed us to implement our CRUD methods to interact without DB.
+ Deployed our lambda code which created our serverless environment. Next we used postman to add entries to our DB table and tested each CRUD method.
+ We verified that the tables were added in our DynamoDB table and we also used Cloudwatch for monitoring 
+ the logs of our API. 
 
 
 
