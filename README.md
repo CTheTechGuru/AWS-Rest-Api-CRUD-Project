@@ -1,6 +1,6 @@
-AWS Rest API CRUD Project
+Serverless REST API with AWS Lambda and DynamoDB | CRUD Project
 
-<h1 align="center">AWS Rest API CRUD Project</h3>
+<h1 align="center">Serverless REST API with AWS Lambda and DynamoDB | CRUD Project</h3>
 
 ![](https://github.com/CTheTechGuru/AWS-Rest-Api-CRUD-Project/blob/main/Images/image21.jpg)
 
