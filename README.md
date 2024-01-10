@@ -1,6 +1,6 @@
-Serverless REST API with AWS Lambda and DynamoDB | CRUD Project
+Serverless REST API with API Gateway & Lambda | CRUD Project
 
-<h1 align="center">Serverless REST API with AWS Lambda and DynamoDB | CRUD Project</h3>
+<h1 align="center">Serverless REST API with API Gateway & Lambda</h3>
 
 ![](https://github.com/CTheTechGuru/AWS-Rest-Api-CRUD-Project/blob/main/Images/image21.jpg)
 
